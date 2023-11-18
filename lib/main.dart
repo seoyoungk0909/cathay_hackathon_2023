@@ -32,12 +32,12 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // '/': (context) => HomePage(),
-        'mainPage': (context) => MainPage(),
-        'bookFlight': (context) => BookFlightPage(),
-        'myTrips': (context) => MyTripsPage(),
-        'buddyExpress': (context) => BuddyExpressPage(),
-        'more': (context) => MorePage(),
-        'travelTypeTest': (context) => TravelTypeTestPage(),
+        'mainPage': (context) => const MainPage(),
+        'bookFlight': (context) => const BookFlightPage(),
+        'myTrips': (context) => const MyTripsPage(),
+        'buddyExpress': (context) => const BuddyExpressPage(),
+        'more': (context) => const MorePage(),
+        'travelTypeTest': (context) => const TravelTypeTestPage(),
       },
       theme: ThemeData(
         primaryColor: CustomColors.representBlack,
