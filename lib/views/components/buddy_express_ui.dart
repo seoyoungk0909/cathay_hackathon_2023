@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import '/controllers/event_controller.dart';
+import 'package:intl/intl.dart';
 
-Widget eventUI(BuildContext context) {
+Widget eventUI(BuildContext context, EventController controller) {
   return Container(
-      width: 180,
-      height: 100,
+      height: 230,
       margin: const EdgeInsets.all(8),
       decoration: ShapeDecoration(
-        image: const DecorationImage(
-          image: NetworkImage(
-              "https://i0.wp.com/billypenn.com/wp-content/uploads/2022/07/ovalferriswheel-sunsetcrop.jpg?fit=2400%2C1350&ssl=1"),
+        image: DecorationImage(
+          image: NetworkImage(controller.event.photoLink),
           fit: BoxFit.cover,
         ),
         shape: RoundedRectangleBorder(
@@ -45,7 +45,8 @@ Widget eventUI(BuildContext context) {
                 Container(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Text(
-                    "Jan 9th 12:00PM",
+                    DateFormat("MMM dd 'at' h:mma")
+                        .format(controller.event.eventTime),
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: Theme.of(context).primaryColor,
                           fontSize: 10,
@@ -59,7 +60,7 @@ Widget eventUI(BuildContext context) {
                   children: [
                     Container(
                       child: Text(
-                        "2 People",
+                        '${controller.event.capacity.toString()} people',
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               color: Theme.of(context).primaryColor,
                               fontSize: 10,
@@ -75,7 +76,7 @@ Widget eventUI(BuildContext context) {
                 ),
                 Container(
                   child: Text(
-                    "Gender: No Preference",
+                    "Gender: ${controller.event.gender}",
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: Theme.of(context).primaryColor,
                           fontSize: 10,
@@ -103,7 +104,7 @@ Widget eventUI(BuildContext context) {
                 ),
               ),
               child: Center(
-                  child: Text("Join me for a walk@Asia Park",
+                  child: Text(controller.event.title,
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: Theme.of(context).primaryColor,
                           fontSize: 10,

@@ -9,6 +9,7 @@ import 'views/buddy_express_page.dart';
 import 'views/more_page.dart';
 import 'views/main_page.dart';
 import 'views/travel_type_test_page.dart';
+import 'views/make_event_page.dart';
 import 'views/travel_type_result_page.dart';
 
 // Import Firebase related packages
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         'buddyExpress': (context) => const BuddyExpressPage(),
         'more': (context) => const MorePage(),
         'travelTypeTest': (context) => const TravelTypeTestPage(),
+        'makeEvent': (context) => MakeEventPage(),
         'travelTypeResult': (context) => const TravelTypeResultPage(),
       },
       theme: ThemeData(
