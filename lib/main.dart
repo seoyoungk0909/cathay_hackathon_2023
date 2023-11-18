@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
         highlightColor: CustomColors.representPurple,
         splashColor: CustomColors.representMint,
         shadowColor: CustomColors.lightPurple,
+        unselectedWidgetColor: CustomColors.grey,
         textTheme: const TextTheme(
           bodyLarge: TextStyle(
             fontFamily: 'Raleway',
