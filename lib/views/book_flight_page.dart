@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BookFlightPage extends StatefulWidget {
+  const BookFlightPage({super.key});
+
   @override
   _BookFlightPageState createState() => _BookFlightPageState();
 }
@@ -11,7 +13,7 @@ class _BookFlightPageState extends State<BookFlightPage> {
     return Scaffold(
 
       body: Container(
-        child: Center(
+        child: const Center(
           child: Text('Book Flight Page'),
         ),
       ),
