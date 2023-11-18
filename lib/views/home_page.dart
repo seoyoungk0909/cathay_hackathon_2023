@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_svg/svg.dart';
 
 // import views
@@ -12,7 +10,7 @@ import 'more_page.dart';
 
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -22,7 +20,7 @@ class _HomePageState extends State<HomePage> {
 int _selectedIndex = 0; // Declare the selectedIndex variable
 
 // List of page names
-List<Widget> pages = [MainPage(), BookFlightPage(), MyTripsPage(), BuddyExpressPage(), MorePage()];
+List<Widget> pages = [const MainPage(), const BookFlightPage(), const MyTripsPage(), const BuddyExpressPage(), const MorePage()];
 
 // Callback function to handle navigation
 void _onItemTapped(int index) {
@@ -44,13 +42,13 @@ void _onItemTapped(int index) {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             activeIcon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-home-active.svg',
             )),
             icon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-home-inactive.svg',
@@ -59,13 +57,13 @@ void _onItemTapped(int index) {
           ),
           BottomNavigationBarItem(
             activeIcon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-bookFlight-active.svg',
             )),
             icon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-bookFlight-inactive.svg',
@@ -74,13 +72,13 @@ void _onItemTapped(int index) {
           ),
           BottomNavigationBarItem(
             activeIcon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-myTrips-active.svg',
             )),
             icon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-myTrips-inactive.svg',
@@ -89,13 +87,13 @@ void _onItemTapped(int index) {
           ),
           BottomNavigationBarItem(
             activeIcon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-buddyExpress-active.svg',
             )),
             icon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-buddyExpress-inactive.svg',
@@ -104,13 +102,13 @@ void _onItemTapped(int index) {
           ),
           BottomNavigationBarItem(
             activeIcon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
               'icons/icon-more-active.svg',
             )),
             icon: Container(
-              margin: EdgeInsets.only(bottom: 4),
+              margin: const EdgeInsets.only(bottom: 4),
 
               height: 30,
               child: SvgPicture.asset(

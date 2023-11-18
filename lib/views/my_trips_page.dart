@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyTripsPage extends StatefulWidget {
+  const MyTripsPage({super.key});
+
   @override
   _MyTripsPageState createState() => _MyTripsPageState();
 }
@@ -11,7 +13,7 @@ class _MyTripsPageState extends State<MyTripsPage> {
     // TODO: Implement the UI for MyTripsPage
         return Scaffold(
       body: Container(
-        child: Center(
+        child: const Center(
           child: Text('Book Flight Page'),
         ),
       ),

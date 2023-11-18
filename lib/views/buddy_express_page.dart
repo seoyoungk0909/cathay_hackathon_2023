@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BuddyExpressPage extends StatefulWidget {
+  const BuddyExpressPage({super.key});
+
   @override
   _BuddyExpressPageState createState() => _BuddyExpressPageState();
 }
@@ -10,7 +12,7 @@ class _BuddyExpressPageState extends State<BuddyExpressPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Center(
+        child: const Center(
           child: Text('Buddy Express Page'),
         ),
       ),
