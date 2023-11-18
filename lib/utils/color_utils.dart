@@ -14,4 +14,5 @@ class CustomColors {
   static Color lightPurple = hexStringToColor("#E0C9EB");
   static Color representMint = hexStringToColor("#59C9E0");
   static Color representWhite = hexStringToColor("#ffffff");
+  static Color grey = hexStringToColor("BDBDBD");
 }
