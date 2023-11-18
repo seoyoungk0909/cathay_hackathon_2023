@@ -8,6 +8,7 @@ import 'views/my_trips_page.dart';
 import 'views/buddy_express_page.dart';
 import 'views/more_page.dart';
 import 'views/main_page.dart';
+import 'views/travel_type_test_page.dart';
 
 // Import Firebase related packages
 import 'package:firebase_auth/firebase_auth.dart';
@@ -41,15 +42,17 @@ class MyApp extends StatelessWidget {
           'myTrips': (context) => MyTripsPage(),
           'buddyExpress': (context) => BuddyExpressPage(),
           'more': (context) => MorePage(),
+          'travelTypeTest': (context) => TravelTypeTestPage(),
             },
       theme: ThemeData(
         primaryColor: CustomColors.representBlack,
         primaryColorLight: CustomColors.representWhite,
         highlightColor: CustomColors.representPurple,
         splashColor: CustomColors.representMint,
-              textTheme: TextTheme(
+        shadowColor: CustomColors.lightPurple,
+        textTheme: TextTheme(
     bodyText1: TextStyle(
-      fontFamily: 'Railway',
+      fontFamily: 'Raleway',
     ),),
       ),
       home: const HomePage(),
