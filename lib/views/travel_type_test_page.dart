@@ -19,11 +19,24 @@ class _TravelTypeTestPageState extends State<TravelTypeTestPage> {
         child: TravelTestQuestion(
           title: "Title",
           questionNumber: 1,
-          question: "I would like to go to restaurants",
-          category: "Food/Restaurants",
-          option1: "With high ratings or Instagrammable place",
-          option2: "Where I can feel the authentic local vibes",
+          question: "I would like to visit...",
+          category: "Experiences",
+          option1: "Amusement parks \n filled with attractions.",
+          option2: "Museums \n to learn in-depth history.",
         ),
+/*
+      child: TravelTestQuestion(
+          title: "Title",
+          questionNumber: 2,
+          question: "I would like to shop in ... ",
+          category: "Shopping",
+          option1: "Night market \n for local goods.",
+          option2: "Demartment \n store for luxury goods.",
+        ),
+      */
+
+
+
       ),
     );
   }
