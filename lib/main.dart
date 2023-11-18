@@ -17,7 +17,9 @@ import 'firebase_options.dart';
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -27,11 +29,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Team 30", debugShowCheckedModeBanner: false,
+      title: "Team 30",
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
           // '/': (context) => HomePage(),
-          'mainPage': (context) => const MainPage(),'bookFlight': (context) => const BookFlightPage(),'myTrips': (context) => const MyTripsPage(),
+          'mainPage': (context) => const MainPage(),
+          'bookFlight': (context) => const BookFlightPage(),
+          'myTrips': (context) => const MyTripsPage(),
           'buddyExpress': (context) => const BuddyExpressPage(),
           'more': (context) => const MorePage(),
           'travelTypeTest': (context) => const TravelTypeTestPage(),

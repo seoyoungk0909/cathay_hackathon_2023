@@ -37,7 +37,7 @@ void _onItemTapped(int index) {
       child: pages[_selectedIndex],
         ),
 
-        bottomNavigationBar: SizedBox(height: 58, child: BottomNavigationBar(
+        bottomNavigationBar: SizedBox(child: BottomNavigationBar(
         backgroundColor: Theme.of(context).highlightColor,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -45,13 +45,13 @@ void _onItemTapped(int index) {
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-home-active.svg',
+              'assets/icons/icon-home-active.svg',
             )),
             icon: Container(
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-home-inactive.svg',
+              'assets/icons/icon-home-inactive.svg',
             )),
             label: 'Home',
           ),
@@ -60,13 +60,13 @@ void _onItemTapped(int index) {
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-bookFlight-active.svg',
+              'assets/icons/icon-bookFlight-active.svg',
             )),
             icon: Container(
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-bookFlight-inactive.svg',
+              'assets/icons/icon-bookFlight-inactive.svg',
             )),
             label: 'Book Flight',
           ),
@@ -75,13 +75,13 @@ void _onItemTapped(int index) {
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-myTrips-active.svg',
+              'assets/icons/icon-myTrips-active.svg',
             )),
             icon: Container(
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-myTrips-inactive.svg',
+              'assets/icons/icon-myTrips-inactive.svg',
             )),
             label: 'My Trips',
           ),
@@ -90,13 +90,13 @@ void _onItemTapped(int index) {
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-buddyExpress-active.svg',
+              'assets/icons/icon-buddyExpress-active.svg',
             )),
             icon: Container(
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-buddyExpress-inactive.svg',
+              'assets/icons/icon-buddyExpress-inactive.svg',
             )),
             label: 'Buddy Express',
           ),
@@ -105,21 +105,20 @@ void _onItemTapped(int index) {
               margin: const EdgeInsets.only(bottom: 4),
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-more-active.svg',
+              'assets/icons/icon-more-active.svg',
             )),
             icon: Container(
               margin: const EdgeInsets.only(bottom: 4),
 
               height: 30,
               child: SvgPicture.asset(
-              'icons/icon-more-inactive.svg',
+              'assets/icons/icon-more-inactive.svg',
             )),
             label: 'More',
           ),
         ],
-                    selectedFontSize: 10.0,
-                    unselectedFontSize: 10.0,
-
+                    selectedFontSize: 12.0,
+                    unselectedFontSize: 12.0,
   selectedItemColor: Theme.of(context).highlightColor,
 unselectedItemColor: Colors.grey,
 showUnselectedLabels: true,
@@ -295,7 +294,7 @@ void _onItemTapped(int index) {
                         child: Row(
                           children: [
                             IconButton(
-                                icon: const Icon(Icons.edit),
+                                icon: const Icon(assets/Icons.edit),
                                 onPressed: () => _update(documentSnapshot)),
                             IconButton(
                                 icon: const Icon(Icons.delete),
