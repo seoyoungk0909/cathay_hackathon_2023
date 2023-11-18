@@ -14,10 +14,10 @@ import 'views/travel_type_test_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-
-
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -27,15 +27,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Team 30", debugShowCheckedModeBanner: false,
+      title: "Team 30",
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-          // '/': (context) => HomePage(),
-          'mainPage': (context) => const MainPage(),'bookFlight': (context) => const BookFlightPage(),'myTrips': (context) => const MyTripsPage(),
-          'buddyExpress': (context) => const BuddyExpressPage(),
-          'more': (context) => const MorePage(),
-          'travelTypeTest': (context) => const TravelTypeTestPage(),
-            },
+        // '/': (context) => HomePage(),
+        'mainPage': (context) => MainPage(),
+        'bookFlight': (context) => BookFlightPage(),
+        'myTrips': (context) => MyTripsPage(),
+        'buddyExpress': (context) => BuddyExpressPage(),
+        'more': (context) => MorePage(),
+        'travelTypeTest': (context) => TravelTypeTestPage(),
+      },
       theme: ThemeData(
         primaryColor: CustomColors.representBlack,
         primaryColorLight: CustomColors.representWhite,
@@ -43,9 +46,10 @@ class MyApp extends StatelessWidget {
         splashColor: CustomColors.representMint,
         shadowColor: CustomColors.lightPurple,
         textTheme: const TextTheme(
-    bodyLarge: TextStyle(
-      fontFamily: 'Raleway',
-    ),),
+          bodyLarge: TextStyle(
+            fontFamily: 'Raleway',
+          ),
+        ),
       ),
       home: const HomePage(),
     );

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'components/travel_test_ui.dart';
 
 class TravelTypeTestPage extends StatefulWidget {
-  const TravelTypeTestPage({super.key});
-
   @override
   _TravelTypeTestPageState createState() => _TravelTypeTestPageState();
 }
@@ -12,13 +11,12 @@ class _TravelTypeTestPageState extends State<TravelTypeTestPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Travel Type Test Page'),
+        title: Text('Travel Type Test Page'),
       ),
       body: Container(
-        child: const Center(
-          child: Text('This is the Travel Type Test Page'),
-        ),
+        child: travelTestUI(context, "Title", 1, "question?"),
       ),
     );
   }
 }
+Bool
