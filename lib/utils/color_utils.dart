@@ -9,8 +9,8 @@ Color hexStringToColor(String hexColor) {
 }
 
 class CustomColors {
-  // representative colors #1
   static Color representBlack = hexStringToColor("#000000");
-  static Color representOrange = hexStringToColor("#ffa545");
+  static Color representPurple = hexStringToColor("#702B91");
+  static Color representMint = hexStringToColor("#59C9E0");
   static Color representWhite = hexStringToColor("#ffffff");
 }
