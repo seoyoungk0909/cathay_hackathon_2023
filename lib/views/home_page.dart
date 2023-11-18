@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_svg/svg.dart';
+
+// import views
+import 'main_page.dart';
+import 'book_flight_page.dart';
+import 'my_trips_page.dart';
+import 'buddy_express_page.dart';
+import 'more_page.dart';
+
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -9,6 +19,91 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+int _selectedIndex = 0; // Declare the selectedIndex variable
+
+// List of page names
+List<Widget> pages = [MainPage(), BookFlightPage(), MyTripsPage(), BuddyExpressPage(), MorePage()];
+
+// Callback function to handle navigation
+void _onItemTapped(int index) {
+  setState(() {
+    _selectedIndex = index;
+    // Perform navigation based on the selected index
+    // String selectedPage = pages[_selectedIndex];
+  });
+}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Center(child: Text('Appbar')),
+            backgroundColor: Theme.of(context).highlightColor,
+
+        ),
+        body: Center(
+      child: pages[_selectedIndex],
+        ),
+
+        bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Theme.of(context).highlightColor,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            activeIcon: SvgPicture.asset(
+              'icons/icon-home-active.svg',
+            ),
+            icon: SvgPicture.asset(
+              'icons/icon-home-inactive.svg',
+            ),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: SvgPicture.asset(
+              'icons/icon-bookFlight-active.svg',
+            ),
+            icon: SvgPicture.asset(
+              'icons/icon-bookFlight-inactive.svg',
+            ),
+            label: 'Book Flight',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: SvgPicture.asset(
+              'icons/icon-myTrips-active.svg',
+            ),
+            icon: SvgPicture.asset(
+              'icons/icon-myTrips-inactive.svg',
+            ),
+            label: 'My Trips',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: SvgPicture.asset(
+              'icons/icon-buddyExpress-active.svg',
+            ),
+            icon: SvgPicture.asset(
+              'icons/icon-buddyExpress-inactive.svg',
+            ),
+            label: 'Buddy Express',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: SvgPicture.asset(
+              'icons/icon-more-active.svg',
+            ),
+            icon: SvgPicture.asset(
+              'icons/icon-more-inactive.svg',
+            ),
+            label: 'More',
+          ),
+        ],
+        // selectedItemColor: Theme.of(context).primaryColorLight,
+        // unselectedItemColor: Theme.of(context).primaryColor,
+  currentIndex: _selectedIndex,
+  onTap: _onItemTapped,
+    ));
+  }
+}
+
+
+/*class _HomePageState extends State<HomePage> {
 // text fields' controllers
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _priceController = TextEditingController();
@@ -215,4 +310,4 @@ void _onItemTapped(int index) {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
   }
-}
+}*/
