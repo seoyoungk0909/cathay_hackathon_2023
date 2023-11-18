@@ -11,6 +11,7 @@ Color hexStringToColor(String hexColor) {
 class CustomColors {
   static Color representBlack = hexStringToColor("#000000");
   static Color representPurple = hexStringToColor("#702B91");
+  static Color lightPurple = hexStringToColor("#E0C9EB");
   static Color representMint = hexStringToColor("#59C9E0");
   static Color representWhite = hexStringToColor("#ffffff");
 }

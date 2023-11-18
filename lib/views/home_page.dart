@@ -26,79 +26,108 @@ List<Widget> pages = [MainPage(), BookFlightPage(), MyTripsPage(), BuddyExpressP
 
 // Callback function to handle navigation
 void _onItemTapped(int index) {
+  if ((index != 1) && (index != 2) && (index != 4)){
   setState(() {
     _selectedIndex = index;
-    // Perform navigation based on the selected index
-    // String selectedPage = pages[_selectedIndex];
-  });
+  });}
 }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Center(child: Text('Appbar')),
-            backgroundColor: Theme.of(context).highlightColor,
-
-        ),
         body: Center(
       child: pages[_selectedIndex],
         ),
 
-        bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: SizedBox(height: 58, child: BottomNavigationBar(
         backgroundColor: Theme.of(context).highlightColor,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset(
+            activeIcon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-home-active.svg',
-            ),
-            icon: SvgPicture.asset(
+            )),
+            icon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-home-inactive.svg',
-            ),
+            )),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset(
+            activeIcon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-bookFlight-active.svg',
-            ),
-            icon: SvgPicture.asset(
+            )),
+            icon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-bookFlight-inactive.svg',
-            ),
+            )),
             label: 'Book Flight',
           ),
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset(
+            activeIcon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-myTrips-active.svg',
-            ),
-            icon: SvgPicture.asset(
+            )),
+            icon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-myTrips-inactive.svg',
-            ),
+            )),
             label: 'My Trips',
           ),
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset(
+            activeIcon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-buddyExpress-active.svg',
-            ),
-            icon: SvgPicture.asset(
+            )),
+            icon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-buddyExpress-inactive.svg',
-            ),
+            )),
             label: 'Buddy Express',
           ),
           BottomNavigationBarItem(
-            activeIcon: SvgPicture.asset(
+            activeIcon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-more-active.svg',
-            ),
-            icon: SvgPicture.asset(
+            )),
+            icon: Container(
+              margin: EdgeInsets.only(bottom: 4),
+
+              height: 30,
+              child: SvgPicture.asset(
               'icons/icon-more-inactive.svg',
-            ),
+            )),
             label: 'More',
           ),
         ],
-        // selectedItemColor: Theme.of(context).primaryColorLight,
-        // unselectedItemColor: Theme.of(context).primaryColor,
+                    selectedFontSize: 10.0,
+                    unselectedFontSize: 10.0,
+
+  selectedItemColor: Theme.of(context).highlightColor,
+unselectedItemColor: Colors.grey,
+showUnselectedLabels: true,
   currentIndex: _selectedIndex,
   onTap: _onItemTapped,
-    ));
+    )));
   }
 }
 
