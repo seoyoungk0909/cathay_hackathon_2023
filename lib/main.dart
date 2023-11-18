@@ -14,8 +14,6 @@ import 'views/travel_type_test_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -33,14 +31,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-          // '/': (context) => HomePage(),
-          'mainPage': (context) => const MainPage(),
-          'bookFlight': (context) => const BookFlightPage(),
-          'myTrips': (context) => const MyTripsPage(),
-          'buddyExpress': (context) => const BuddyExpressPage(),
-          'more': (context) => const MorePage(),
-          'travelTypeTest': (context) => const TravelTypeTestPage(),
-            },
+        // '/': (context) => HomePage(),
+        'mainPage': (context) => const MainPage(),
+        'bookFlight': (context) => const BookFlightPage(),
+        'myTrips': (context) => const MyTripsPage(),
+        'buddyExpress': (context) => const BuddyExpressPage(),
+        'more': (context) => const MorePage(),
+        'travelTypeTest': (context) => const TravelTypeTestPage(),
+      },
       theme: ThemeData(
         primaryColor: CustomColors.representBlack,
         primaryColorLight: CustomColors.representWhite,
@@ -49,9 +47,10 @@ class MyApp extends StatelessWidget {
         shadowColor: CustomColors.lightPurple,
         unselectedWidgetColor: CustomColors.grey,
         textTheme: const TextTheme(
-    bodyLarge: TextStyle(
-      fontFamily: 'Raleway',
-    ),),
+          bodyLarge: TextStyle(
+            fontFamily: 'Raleway',
+          ),
+        ),
       ),
       home: const HomePage(),
     );
