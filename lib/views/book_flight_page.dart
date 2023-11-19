@@ -11,7 +11,6 @@ class _BookFlightPageState extends State<BookFlightPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
         child: const Center(
           child: Text('Book Flight Page'),

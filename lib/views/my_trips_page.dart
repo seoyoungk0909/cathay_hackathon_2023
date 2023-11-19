@@ -10,14 +10,12 @@ class MyTripsPage extends StatefulWidget {
 class _MyTripsPageState extends State<MyTripsPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: Implement the UI for MyTripsPage
-        return Scaffold(
+    return Scaffold(
       body: Container(
         child: const Center(
           child: Text('Book Flight Page'),
         ),
       ),
     );
-
   }
 }

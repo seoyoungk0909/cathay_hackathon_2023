@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
-import 'home_page.dart';
 
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class MakeEventPage extends StatefulWidget {
+  const MakeEventPage({super.key});
+
   @override
   _MakeEventPageState createState() => _MakeEventPageState();
 }
@@ -133,7 +133,7 @@ class _MakeEventPageState extends State<MakeEventPage> {
           backgroundColor: Theme.of(context).highlightColor,
           leading: IconButton(
             icon: Icon(Icons.arrow_back,
-            color: Theme.of(context).primaryColorLight),
+                color: Theme.of(context).primaryColorLight),
             onPressed: () {
               Navigator.pushNamed(context, '/');
             },
@@ -141,15 +141,14 @@ class _MakeEventPageState extends State<MakeEventPage> {
           title: SizedBox(
             width: 48,
             height: 45,
-            child: 
-            SvgPicture.asset('assets/icons/logo-white.svg'),
+            child: SvgPicture.asset('assets/icons/logo-white.svg'),
           ),
           actions: [
             Container(
               margin: const EdgeInsets.only(right: 20),
               width: 20,
               height: 20,
-              child:             SvgPicture.asset('assets/icons/share.svg'),
+              child: SvgPicture.asset('assets/icons/share.svg'),
             ),
           ],
         ),
@@ -162,26 +161,28 @@ class _MakeEventPageState extends State<MakeEventPage> {
                 left: 0,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  child: Image.asset('assets/imgs/hoian.png', fit: BoxFit.cover),
+                  child:
+                      Image.asset('assets/imgs/hoian.png', fit: BoxFit.cover),
                 ),
               ),
               Positioned(
                 top: 170,
                 child: GestureDetector(
-    onTap: () {
-      setState(() {
-        clicked = !clicked;
-      });
-    },
-    child: SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: clicked
-          ? Image(image: AssetImage('assets/icons/hoian-filled.png'))
-          : Image(image: AssetImage('assets/icons/subtract.png'))
-    ),
-  ),
+                  onTap: () {
+                    setState(() {
+                      clicked = !clicked;
+                    });
+                  },
+                  child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: clicked
+                          ? const Image(
+                              image:
+                                  AssetImage('assets/icons/hoian-filled.png'))
+                          : const Image(
+                              image: AssetImage('assets/icons/subtract.png'))),
+                ),
               ),
-
             ],
           ),
         )));

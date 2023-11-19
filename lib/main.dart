@@ -41,11 +41,12 @@ class MyApp extends StatelessWidget {
         'buddyExpress': (context) => const BuddyExpressPage(),
         'more': (context) => const MorePage(),
         'travelTypeTest': (context) => const TravelTypeTestPage(),
-        'makeEvent': (context) => MakeEventPage(),
-        'registerEvent': (context) => RegisterEventPage(),
+        'makeEvent': (context) => const MakeEventPage(),
+        'registerEvent': (context) => const RegisterEventPage(),
         'travelTypeResult': (context) => const TravelTypeResultPage(),
-        'chat': (context) => ChatPage(),
-        'recommendedDestination':(context)=>RecommendedDestinationPage(),
+        'chat': (context) => const ChatPage(),
+        'recommendedDestination': (context) =>
+            const RecommendedDestinationPage(),
       },
       theme: ThemeData(
         primaryColor: CustomColors.representBlack,

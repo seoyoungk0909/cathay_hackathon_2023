@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class TravelTestQuestion extends StatefulWidget {
-  final String title;
   final int questionNumber;
   final String question;
   final String category;
   final String option1;
   final String option2;
 
-  TravelTestQuestion({
-    required this.title,
+  const TravelTestQuestion({
+    super.key,
     required this.questionNumber,
     required this.question,
     required this.category,
@@ -23,7 +22,7 @@ class TravelTestQuestion extends StatefulWidget {
 }
 
 class _TravelTestQuestionState extends State<TravelTestQuestion> {
-  int selectedOption = 0; // Maintain the selected option index as state
+  int selectedOption = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -34,55 +33,54 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 30),
+                margin: const EdgeInsetsDirectional.fromSTEB(10, 30, 10, 30),
                 child: Center(
                   child: Text(
                     'Travel Type Test',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: Theme.of(context).primaryColor,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                          color: Theme.of(context).primaryColor,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
                 ),
               ),
               Container(
-                margin: EdgeInsetsDirectional.fromSTEB(40, 10, 10, 1),
+                margin: const EdgeInsetsDirectional.fromSTEB(40, 10, 10, 1),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Q${widget.questionNumber}.',
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).highlightColor,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w800,
-                  ),
+                        color: Theme.of(context).highlightColor,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w800,
+                      ),
                 ),
               ),
               Container(
-                margin: EdgeInsetsDirectional.fromSTEB(40, 1, 10, 10),
+                margin: const EdgeInsetsDirectional.fromSTEB(40, 1, 10, 10),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   widget.question,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).primaryColor,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600,
-                  ),
+                        color: Theme.of(context).primaryColor,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                      ),
                 ),
               ),
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsetsDirectional.fromSTEB(40, 1, 10, 10),
-            width: 39,
-            height: 30,
-            child: 
-            
-            SvgPicture.asset('assets/icons/hamburger.svg'),
-          ),
+                    margin: const EdgeInsetsDirectional.fromSTEB(40, 1, 10, 10),
+                    width: 39,
+                    height: 30,
+                    child: SvgPicture.asset('assets/icons/hamburger.svg'),
+                  ),
                   SizedBox(
                     child: Container(
-                      padding: EdgeInsetsDirectional.fromSTEB(12, 8, 12, 8),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(12, 8, 12, 8),
                       decoration: BoxDecoration(
                         color: Theme.of(context).highlightColor,
                         borderRadius: BorderRadius.circular(20),
@@ -90,33 +88,34 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
                       child: Text(
                         widget.category,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: Theme.of(context).primaryColorLight,
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                        ),
+                              color: Theme.of(context).primaryColorLight,
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                            ),
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 10),
-              Container(
+              const SizedBox(height: 10),
+              SizedBox(
                 width: 318,
                 child: Column(
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: selectedOption == 0
+                        backgroundColor: selectedOption == 0
                             ? Theme.of(context).shadowColor
-                            : Color(0xd9d9d9), // Set the color for the unselected button
-                        padding: EdgeInsets.symmetric(
+                            : const Color(
+                                0x00d9d9d9), // Set the color for the unselected button
+                        padding: const EdgeInsets.symmetric(
                           vertical: 20,
                           horizontal: 10,
                         ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(3),
                         ),
-                        minimumSize: Size(318, 92),
+                        minimumSize: const Size(318, 92),
                       ),
                       onPressed: () {
                         setState(() {
@@ -124,41 +123,52 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
                         });
                       },
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Wrap(
                           alignment: WrapAlignment.center,
                           children: [
                             Text(
                               widget.option1,
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                color: widget.option1 == 'Amusement parks' || widget.option1 == 'Museums'
-                                    ? Colors.black
-                                    : Theme.of(context).textTheme.bodyText2?.color,
-                                fontSize: 18,
-                                fontWeight: widget.option1 == 'Amusement parks' || widget.option1 == 'Museums'
-                                    ? FontWeight.bold
-                                    : FontWeight.w400,
-                              ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                    color:
+                                        widget.option1 == 'Amusement parks' ||
+                                                widget.option1 == 'Museums'
+                                            ? Colors.black
+                                            : Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium
+                                                ?.color,
+                                    fontSize: 18,
+                                    fontWeight:
+                                        widget.option1 == 'Amusement parks' ||
+                                                widget.option1 == 'Museums'
+                                            ? FontWeight.bold
+                                            : FontWeight.w400,
+                                  ),
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(height: 25),
+                    const SizedBox(height: 25),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: selectedOption == 1
+                        backgroundColor: selectedOption == 1
                             ? Theme.of(context).shadowColor
-                            : Color(0xd9d9d9), // Set the color for the unselected button
-                        padding: EdgeInsets.symmetric(
+                            : const Color(
+                                0x00d9d9d9), // Set the color for the unselected button
+                        padding: const EdgeInsets.symmetric(
                           vertical: 20,
                           horizontal: 10,
                         ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(3),
                         ),
-                        minimumSize: Size(318, 92),
+                        minimumSize: const Size(318, 92),
                       ),
                       onPressed: () {
                         setState(() {
@@ -166,32 +176,43 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
                         });
                       },
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         child: Wrap(
                           alignment: WrapAlignment.center,
                           children: [
                             Text(
                               widget.option2,
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                color: widget.option2 == 'Amusement parks' || widget.option2 == 'Museums'
-                                    ? Colors.black
-                                    : Theme.of(context).textTheme.bodyText2?.color,
-                                fontSize: 18,
-                                fontWeight: widget.option2 == 'Amusement parks' || widget.option2 == 'Museums'
-                                    ? FontWeight.bold
-                                    : FontWeight.w400,
-                              ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                    color:
+                                        widget.option2 == 'Amusement parks' ||
+                                                widget.option2 == 'Museums'
+                                            ? Colors.black
+                                            : Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium
+                                                ?.color,
+                                    fontSize: 18,
+                                    fontWeight:
+                                        widget.option2 == 'Amusement parks' ||
+                                                widget.option2 == 'Museums'
+                                            ? FontWeight.bold
+                                            : FontWeight.w400,
+                                  ),
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(height: 7),
+                    const SizedBox(height: 7),
                     Align(
                       alignment: Alignment.topRight,
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(5, 10, 10, 10),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(5, 10, 10, 10),
                         child: InkWell(
                           onTap: () {
                             setState(() {
@@ -203,7 +224,7 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
                               color: Theme.of(context).highlightColor,
                               borderRadius: BorderRadius.circular(3),
                             ),
-                            child: Padding(
+                            child: const Padding(
                               padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
                               child: Text(
                                 'Next Q. >',
@@ -218,9 +239,9 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
                         ),
                       ),
                     ),
-                    Container
-                    (margin: EdgeInsets.only(top: 100),child:
-                      Image.asset('assets/icons/progressBar.png')),
+                    Container(
+                        margin: const EdgeInsets.only(top: 100),
+                        child: Image.asset('assets/icons/progressBar.png')),
                   ],
                 ),
               ),

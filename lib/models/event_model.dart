@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'user_model.dart';
 
 const List EVENT_CATEGORY = [
   "Attractions",
