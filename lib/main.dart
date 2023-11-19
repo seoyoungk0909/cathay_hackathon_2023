@@ -15,7 +15,6 @@ import 'views/register_event_page.dart';
 import 'views/chat_page.dart';
 import 'views/recommended_destination_page.dart';
 
-
 // Import Firebase related packages
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -29,15 +28,13 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Team 30",
+      title: "Cathay Hackathon Team 30",
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        // '/': (context) => HomePage(),
         'mainPage': (context) => const MainPage(),
         'bookFlight': (context) => const BookFlightPage(),
         'myTrips': (context) => const MyTripsPage(),

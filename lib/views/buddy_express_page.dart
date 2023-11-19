@@ -305,59 +305,21 @@ Widget eventsGridView(List<EventController>? eventsControllers) {
                             fontWeight: FontWeight.bold,
                           ),
                     )),
-                    Container(height: 180, child: 
-                    ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        Container(
-          margin: EdgeInsets.only(left: 10),
-          child:Image.asset(
-          'assets/imgs/asiaparkcomponent.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-        
-        GestureDetector(
-  onTap: () {
-    Navigator.pushNamed(context, 'registerEvent');
-  },
-  child: Container(
-    child: Image.asset(
-      'assets/imgs/banahillcomponent.png',
-      width: 170,
-      height: 270,
-    ),
-  ),
-        ),
-        Container(
-          margin: EdgeInsets.only(right: 10),
-          child:Image.asset(
-          'assets/imgs/sightseeingcomponent.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-      ],
-    ),
-    ),
-
-
-                    // FutureBuilder<List<EventController>>(
-                    //   future: _futureEventsControllers,
-                    //   builder: (BuildContext context,
-                    //       AsyncSnapshot<List<EventController>> snapshot) {
-                    //     if (snapshot.connectionState == ConnectionState.done &&
-                    //         snapshot.hasData) {
-                    //       final filteredData = snapshot.data!
-                    //           .where((event) => event.category == 'Attractions')
-                    //           .toList();
-                    //       return eventsGridView(filteredData);
-                    //     } else {
-                    //       return CircularProgressIndicator();
-                    //     }
-                    //   },
-                    // ),
+                    FutureBuilder<List<EventController>>(
+                      future: _futureEventsControllers,
+                      builder: (BuildContext context,
+                          AsyncSnapshot<List<EventController>> snapshot) {
+                        if (snapshot.connectionState == ConnectionState.done &&
+                            snapshot.hasData) {
+                          final filteredData = snapshot.data!
+                              .where((event) => event.category == 'Attractions')
+                              .toList();
+                          return eventsGridView(filteredData);
+                        } else {
+                          return CircularProgressIndicator();
+                        }
+                      },
+                    ),
                   ],
                 ),
                 
@@ -378,51 +340,21 @@ Column(
                             fontWeight: FontWeight.bold,
                           ),
                     )),
-                    Container(height: 180, child: 
-                    ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        Container(
-          margin: EdgeInsets.only(left: 10),
-          child:Image.asset(
-          'assets/imgs/diningtgt.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-        Container(
-          child:Image.asset(
-          'assets/imgs/steak.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-        Container(
-          margin: EdgeInsets.only(right: 10),
-          child:Image.asset(
-          'assets/imgs/localfood.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-      ],
-    ),
-    ),
-                    // FutureBuilder<List<EventController>>(
-                    //   future: _futureEventsControllers,
-                    //   builder: (BuildContext context,
-                    //       AsyncSnapshot<List<EventController>> snapshot) {
-                    //     if (snapshot.connectionState == ConnectionState.done &&
-                    //         snapshot.hasData) {
-                    //       final filteredData = snapshot.data!
-                    //           .where((event) => event.category == 'Food')
-                    //           .toList();
-                    //       return eventsGridView(filteredData);
-                    //     } else {
-                    //       return CircularProgressIndicator();
-                    //     }
-                    //   },
-                    // ),
+                    FutureBuilder<List<EventController>>(
+                      future: _futureEventsControllers,
+                      builder: (BuildContext context,
+                          AsyncSnapshot<List<EventController>> snapshot) {
+                        if (snapshot.connectionState == ConnectionState.done &&
+                            snapshot.hasData) {
+                          final filteredData = snapshot.data!
+                              .where((event) => event.category == 'Food')
+                              .toList();
+                          return eventsGridView(filteredData);
+                        } else {
+                          return CircularProgressIndicator();
+                        }
+                      },
+                    ),
                   ],
                 ),
                 Column(
@@ -442,53 +374,21 @@ Column(
                             fontWeight: FontWeight.bold,
                           ),
                     )),
-                    Container(height: 180, child: 
-                    ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        Container(
-          margin: EdgeInsets.only(left: 10),
-          child:Image.asset(
-          'assets/imgs/citytour.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-        Container(
-          child:Image.asset(
-          'assets/imgs/surf.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-        Container(
-          margin: EdgeInsets.only(right: 10),
-          child:Image.asset(
-          'assets/imgs/sailor.png',
-          width: 170,
-          height: 270,
-        ),
-        ),
-      ],
-    ),
-    ),
-
-
-                    // FutureBuilder<List<EventController>>(
-                    //   future: _futureEventsControllers,
-                    //   builder: (BuildContext context,
-                    //       AsyncSnapshot<List<EventController>> snapshot) {
-                    //     if (snapshot.connectionState == ConnectionState.done &&
-                    //         snapshot.hasData) {
-                    //       final filteredData = snapshot.data!
-                    //           .where((event) => event.category == 'Activities')
-                    //           .toList();
-                    //       return eventsGridView(filteredData);
-                    //     } else {
-                    //       return CircularProgressIndicator();
-                    //     }
-                    //   },
-                    // ),
+                    FutureBuilder<List<EventController>>(
+                      future: _futureEventsControllers,
+                      builder: (BuildContext context,
+                          AsyncSnapshot<List<EventController>> snapshot) {
+                        if (snapshot.connectionState == ConnectionState.done &&
+                            snapshot.hasData) {
+                          final filteredData = snapshot.data!
+                              .where((event) => event.category == 'Activities')
+                              .toList();
+                          return eventsGridView(filteredData);
+                        } else {
+                          return CircularProgressIndicator();
+                        }
+                      },
+                    ),
                   ],
                 ),             
               ]),
