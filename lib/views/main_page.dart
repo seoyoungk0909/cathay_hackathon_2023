@@ -97,13 +97,13 @@ class _MainPageState extends State<MainPage> {
                     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15.5),
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10.5),
                   ),
                   child: Text(
-              'Pre-Flight',
+              'Pre-Booking',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               color: Theme.of(context).primaryColorLight,
-              fontSize: 15.5,
+              fontSize: 14,
               fontWeight: FontWeight.w700,
             ),
             ),
@@ -117,13 +117,13 @@ class _MainPageState extends State<MainPage> {
                     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15.5),
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10.5),
                   ),
                   child: Text(
-              'Flight',
+              'Pre-Flight',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               color: Theme.of(context).primaryColorLight,
-              fontSize: 15,
+              fontSize: 14,
               fontWeight: FontWeight.w700,
             ),
             ),
@@ -137,13 +137,13 @@ class _MainPageState extends State<MainPage> {
                     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10.5),
                   ),
                   child: Text(
               'Post-Flight',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               color: Theme.of(context).primaryColorLight,
-              fontSize: 15,
+              fontSize: 14,
               fontWeight: FontWeight.w700,
             ),
             ),

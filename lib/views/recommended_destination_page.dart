@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 
-class TravelTypeResultPage extends StatefulWidget {
-  const TravelTypeResultPage({super.key});
+class RecommendedDestinationPage extends StatefulWidget {
+  const RecommendedDestinationPage({super.key});
 
   @override
-  _TravelTypeResultPageState createState() => _TravelTypeResultPageState();
+  _RecommendedDestinationPageState createState() => _RecommendedDestinationPageState();
 }
 
-class _TravelTypeResultPageState extends State<TravelTypeResultPage> {
+class _RecommendedDestinationPageState extends State<RecommendedDestinationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,15 +40,7 @@ class _TravelTypeResultPageState extends State<TravelTypeResultPage> {
             ),
           ],
         ),
-      body: GestureDetector(
-  onTap: () {
-    Navigator.pushNamed(context, 'recommendedDestination');
-  },
-        child: Center(child: Image.asset('assets/imgs/testResult.png')), 
+      body: Container( margin: EdgeInsets.only(left: 25, top: 40),        
+        child: Image.asset('assets/imgs/recommendedDestination.png'), 
       ));
       }}
-
-
-
-
-
