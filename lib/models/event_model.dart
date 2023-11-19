@@ -11,7 +11,6 @@ const List EVENT_CATEGORY = [
 const List EVENT_LANGUAGE = ["English", "Cantonese", "Mandarin"];
 
 class Event {
-  // User writer = User();
   String title = "Join me for a walk@Asia Park";
   String category = "Attractions";
   String location = "Asia Park";
@@ -26,9 +25,7 @@ class Event {
       "https://i0.wp.com/billypenn.com/wp-content/uploads/2022/07/ovalferriswheel-sunsetcrop.jpg?fit=2400%2C1350&ssl=1";
   int views = 0;
   DocumentReference<Map<String, dynamic>>? firebaseDocRef;
-
   Event({
-    // User? eventWriter,
     String? eventTitle,
     String? eventCategory,
     String? eventLocation,
@@ -43,7 +40,6 @@ class Event {
     int? eventViews = 0,
     DocumentReference<Map<String, dynamic>>? docRef,
   }) {
-    // writer = eventWriter ?? writer;
     title = eventTitle ?? title;
     category = eventCategory ?? category;
     location = eventLocation ?? location;
@@ -83,7 +79,6 @@ class Event {
         eventEndAge: eventData.get('endAge'),
         eventGender: eventData.get('gender'),
         eventLanguage: eventData.get('language'),
-        // eventWriter: await User.fromUserRef(eventData.get('writer')),
         eventExpired: expired,
         eventHeldTime: (eventData.get('eventTime') as Timestamp).toDate(),
         eventPhotoLink: eventData.get('photoLink'),

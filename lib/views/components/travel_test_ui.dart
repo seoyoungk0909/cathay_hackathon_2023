@@ -34,7 +34,7 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 30),
+                margin: EdgeInsetsDirectional.fromSTEB(10, 30, 10, 30),
                 child: Center(
                   child: Text(
                     'Travel Type Test',
@@ -74,13 +74,15 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
                 children: [
                   Container(
                     margin: EdgeInsetsDirectional.fromSTEB(40, 1, 10, 10),
-                    width: 39,
-                    height: 30,
-                    child: SvgPicture.asset("assets/icons/ferris-wheel.svg"),
-                  ),
+            width: 39,
+            height: 30,
+            child: 
+            
+            SvgPicture.asset('assets/icons/hamburger.svg'),
+          ),
                   SizedBox(
                     child: Container(
-                      padding: EdgeInsets.all(8),
+                      padding: EdgeInsetsDirectional.fromSTEB(12, 8, 12, 8),
                       decoration: BoxDecoration(
                         color: Theme.of(context).highlightColor,
                         borderRadius: BorderRadius.circular(20),
@@ -216,6 +218,9 @@ class _TravelTestQuestionState extends State<TravelTestQuestion> {
                         ),
                       ),
                     ),
+                    Container
+                    (margin: EdgeInsets.only(top: 100),child:
+                      Image.asset('assets/icons/progressBar.png')),
                   ],
                 ),
               ),
